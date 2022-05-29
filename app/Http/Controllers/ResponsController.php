@@ -69,7 +69,7 @@ class ResponsController extends Controller
             $data_encode = json_encode($data);
             $user->createNotifUser($data_encode);
         // $response->save();
-        return redirect('/products');
+        return redirect('/admin/products');
 
         
     }
