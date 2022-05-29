@@ -95,11 +95,10 @@
                         <p> {{ strip_tags($data->description) }}</p>
                     </article>
                 </div>
-                <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab2">
-                     
+                 </div> <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab2">
                     <div class="review-wrapper">
-                      
-                        <h2 class="title-lg mb--20"></h2>
+                        <h2 class="title-lg mb--20">REVIEW FROM USER</h2>
+                        @foreach ($product_review as $dd )
                         <div class="review-comment mb--20">
                             <div class="avatar">
                                 <img src="image/icon/author-logo.png" alt="">
@@ -112,12 +111,12 @@
                                     <span class="ion-android-star-outline"></span>
                                     <span class="ion-android-star-outline"></span>
                                 </div>
-                                <h6 class="author"><span class="font-weight-400"></span>
+                                <h6 class="author"><span class="font-weight-400">{{$dd->created_at}}</span>
                                 </h6>
-                                <p></p>
+                                <p>{{$dd->content}}</p>
                             </div>
                         </div>
-                    </div>
+                        @endforeach
                         {{-- @endforeach --}}
                         {{-- <h2 class="title-lg mb--20 pt--15">ADD A REVIEW</h2>
                         <div class="rating-row pt-2">
