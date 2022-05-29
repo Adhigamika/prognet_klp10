@@ -128,9 +128,7 @@ function rupiah ($angka) {
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="row" style="display: flex; align-items:center;justify-content:center;">
-                                            <div class="col-4">
-                                                <img src="{{ URL::asset('assets/images/.$transaksi->proof_of_payment')}}" style="width:100%; height:100px; border-radius:10%" alt="">
-                                            </div>
+                                      
                                             <div class="col-8">
                                                 <p style="font-size: 18px; font-weight: 500;">{{$dd->product->product_name}}</p>
                                                 <p style="font-size: 16px; font-weight: normal;">{{rupiah($dd->product->price)}}</p>
